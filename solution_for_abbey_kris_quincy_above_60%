@@ -1,0 +1,19 @@
+def player(prev_play, opponent_history=[]):
+    opponent_history.append(prev_play)
+
+    guess = "R"
+    k=len(opponent_history)
+    m=k-1
+    n=k-2
+    if opponent_history[m]=="R" :
+        guess = "P"
+    if opponent_history[m]=="P":
+        guess = "S"
+    if opponent_history[m]=="S":
+        guess = "R"
+
+    if opponent_history[m]=="S" and opponent_history[n]=="S":
+        guess = "S"
+    if opponent_history[m]=="R" and opponent_history[n]=="R":
+        guess = "R"
+    return guess
