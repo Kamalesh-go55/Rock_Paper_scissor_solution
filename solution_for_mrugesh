@@ -1,0 +1,17 @@
+guess = "R"
+    k=len(opponent_history)
+    m=k-1
+    n=k-2
+    if opponent_history[m]=="R" and opponent_history[n]=="R":
+        guess = "R"
+    if opponent_history[m]=="S" and opponent_history[n]=="R":
+        guess = "S"
+    if opponent_history[m]=="P" and opponent_history[n]=="P":
+        guess = "P"
+    if opponent_history[m]=="R" and opponent_history[n]=="P":
+        guess = "R"
+    if opponent_history[m]=="S" and opponent_history[n]=="R":
+        guess = "S"
+    if opponent_history[m]=="P" and opponent_history[n]=="S":
+        guess = "P"
+    return guess
